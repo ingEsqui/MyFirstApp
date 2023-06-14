@@ -1,15 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import NavigationStack from './src/Navigations/Navigation';
 import LoginForm from './src/Components/LoginForm';
-import Saludar from './src/Components/Saludar';
+import NavigatorTab from './src/Navigations/NavigationTab';
+import NavigationDrawe from './src/Navigations/NavigationDrawer';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Curso React Native</Text>
-      <Saludar  firstname="Jesús" lastname="Ariza"/>
-      <Saludar/>
-    </View>
+    <NavigationContainer>
+    <NavigationDrawe/>
+    </NavigationContainer>
   );
 }
 
